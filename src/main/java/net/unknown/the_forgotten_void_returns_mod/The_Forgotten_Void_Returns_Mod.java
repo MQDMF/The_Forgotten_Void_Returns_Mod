@@ -13,6 +13,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.unknown.the_forgotten_void_returns_mod.block.ModBlocks;
 import net.unknown.the_forgotten_void_returns_mod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -31,6 +32,7 @@ public class The_Forgotten_Void_Returns_Mod
 
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
@@ -51,7 +53,11 @@ public class The_Forgotten_Void_Returns_Mod
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.VoidStone);
-            event.accept(ModItems.Raw_VoidStone)
+            event.accept(ModItems.Raw_VoidStone);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS {
+            event.accept(ModBlocks.VoidStone_Block);
         }
     }
 
