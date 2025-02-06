@@ -51,6 +51,7 @@ public class The_Forgotten_Void_Returns_Mod
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.VoidStone);
+            event.accept(ModItems.Raw_VoidStone)
         }
     }
 
